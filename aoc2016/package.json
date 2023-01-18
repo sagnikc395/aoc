@@ -8,18 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sagnik3/aoc2016.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sagnik3/aoc2016/issues"
-  },
-  "homepage": "https://github.com/sagnik3/aoc2016#readme",
-  "dependencies": {
-    "manhattan": "^1.0.0"
-  },
+  
   "devDependencies": {
     "jest": "^29.3.1"
   }
