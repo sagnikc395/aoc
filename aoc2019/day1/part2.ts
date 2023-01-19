@@ -1,5 +1,4 @@
-const fs = require("fs");
-
+import fs from "fs";
 const calculateFuel = (input) => {
   return Math.floor(parseFloat(input) / 3) - 2;
 };
