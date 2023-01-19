@@ -1,3 +1,3 @@
 # aoc2021
 
-Advent of Code in C++.
+Advent of Code in Java.
