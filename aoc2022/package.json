@@ -1,0 +1,13 @@
+{
+  "name": "aoc2022",
+  "version": "1.0.0",
+  "description": "My attempt to solve AOC 20222 in Rust.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "type":"module",
+  "author": "",
+  "license": "ISC"
+}
