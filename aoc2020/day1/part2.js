@@ -2,14 +2,14 @@ import * as fs from "fs";
 
 const main = () => {
   try {
-    const data: string = fs.readFileSync("input.txt", "utf-8");
-    const arr: number[] = data.split("\n").map((val) => parseInt(val));
+    const data = fs.readFileSync("input.txt", "utf-8");
+    const arr = data.split("\n").map((val) => parseInt(val));
 
-    let items: number[] = [];
+    let items = [];
 
-    for (let i: number = 0; i < arr.length; i++) {
-      for (let j: number = 1; j < arr.length; j++) {
-        for (let k: number = 2; k < arr.length; k++) {
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 1; j < arr.length; j++) {
+        for (let k = 2; k < arr.length; k++) {
           if (arr[i] + arr[j] + arr[k] === 2020) {
             items.push(arr[i]);
             items.push(arr[j]);

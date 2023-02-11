@@ -1,9 +1,9 @@
 import fs from "fs";
 
-const main: any = () => {
+const main = () => {
   try {
-    const data: string[] = fs.readFileSync("input.txt", "utf-8").split("\n");
-    let valid: number = 0;
+    const data = fs.readFileSync("input.txt", "utf-8").split("\n");
+    let valid = 0;
     data.forEach((passwd) => {
       const args = passwd.split(":");
       const item1 = args[0].split(" ");
@@ -13,7 +13,7 @@ const main: any = () => {
       const high = parseInt(range[1]);
       const key = item1[1];
 
-      let count: number = 0;
+      let count = 0;
       for (let i = 0; i < pass.length; i++) {
         if (pass[i] === key) {
           count += 1;
