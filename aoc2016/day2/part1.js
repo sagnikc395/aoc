@@ -1,4 +1,4 @@
-import fs, { read } from "fs";
+import fs from "fs";
 import Keypad from "./keypad.js";
 
 const readInput = (readFile) => {
