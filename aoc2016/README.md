@@ -1,3 +1,3 @@
 # aoc2016
 
-Advent of Code 2016 solutions in Typescript and Javascript.
+Advent of Code 2016 solutions in Javascript.
