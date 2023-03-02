@@ -11,7 +11,10 @@ def main():
     totalFuel = 0
     for item in p:
         temp = calculateFuel(item)
-    print(p)
+        while(temp>0):
+            totalFuel += temp
+            temp = calculateFuel(temp)
+    print(totalFuel)
 
 
 main()
