@@ -29,9 +29,6 @@ def part2():
                 floor -=1
                 count +=1 
     
-                
-
-
 def main():
     import argparse
     
