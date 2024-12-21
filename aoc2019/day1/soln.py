@@ -14,7 +14,22 @@ def part1():
     print(fuel_req)
 
 def part2():
-    pass 
+    def calculate_fuel(mass):
+        total_fuel = 0 
+        fuel = (mass // 3) - 2
+        while fuel > 0:
+            total_fuel += fuel 
+            fuel = (fuel // 3) -2 
+        return total_fuel
+    
+    with open('./input.txt','r') as f:
+        data = f.read().split('\n')
+    data = [int(m) for m in data]
+    
+    total_fuel = 0 
+    for mass in data:
+        total_fuel += calculate_fuel(mass)
+    print(total_fuel)
 
 
 
