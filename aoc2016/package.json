@@ -1,0 +1,11 @@
+{
+  "name": "aoc2016",
+  "module": "src/index.js",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.1.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
