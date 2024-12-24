@@ -1,5 +1,4 @@
-# advent-of-code 
+# aoc 
 
-Advent of Code Monorepo.
-
+My [Advent Of Code](https://adventofcode.com) solutions monorepo.
 
