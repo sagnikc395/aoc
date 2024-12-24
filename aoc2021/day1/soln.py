@@ -2,14 +2,26 @@ def part1():
     with open('./input.txt','r') as f:
         data = f.read().strip().split('\n')
 
+    measurements = data
     #print(len(data))
-    count = 0
+    #count = 0
 
-    for i in range(len(data)-1):
-        if data[i+1] > data[i]:
-            count += 1
+    # for i in range(len(data)-1):
+    #     if data[i+1] > data[i]:
+    #         count += 1
 
-    print(count)
+    # print(count)
+    increases = 0
+    for i in range(len(measurements)-1):
+        current = measurements[i]
+        next_depth = measurements[i+1]
+        is_increase = next_depth > current
+        if is_increase:
+            increases += 1
+        print(f"{current} -> {next_depth} ({'increased' if is_increase else 'decreased or equal'})")
+
+    print(f"\nTotal measurements: {len(measurements)}")
+    print(f"Final count of increases: {increases}")
 
 def part2():
     pass
