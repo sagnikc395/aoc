@@ -2,15 +2,19 @@ class Position:
     def __init__(self,x=0,y=0):
         self.x = x
         self.y = y
+        self.aim = 0
 
     def forward(self,f):
         self.x += f
+        self.y += ( self.aim * f)
 
     def down(self,d):
-        self.y += d
+        #self.y += d
+        self.aim += d
 
     def up(self,u):
-        self.y -= u
+        #self.y -= u
+        self.aim -= u
 
 
 def part1():
@@ -29,10 +33,22 @@ def part1():
 
     print(point.x * point.y)
 
-
 def part2():
-    pass
+    with open('./input.txt','r') as f:
+        cmds= f.read().strip().split('\n')
 
+    point = Position(0,0)
+    for cmd in cmds:
+        command,val = cmd.split(" ")
+        if command == "forward":
+            point.forward(int(val))
+        elif command == "down":
+            point.down(int(val))
+        elif command == "up":
+            point.up(int(val))
+
+
+    print(point.x * point.y)
 
 
 def main():
