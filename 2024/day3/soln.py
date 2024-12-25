@@ -16,7 +16,32 @@ def part1():
 
 
 def part2():
-    raise NotImplementedError()
+    with open('./input.txt','r') as f:
+        data = f.read()
+
+    import re
+    ans = 0
+    # Split the string by "do()"
+    do_splits = data.split('do()')
+    valid_mul_strings = []
+    valid_muls = []
+    regex = r"mul\(\d{1,3},\d{1,3}\)"
+
+    # Collect substrings before "don't()" in each split
+    for d in do_splits:
+        valid_mul_strings.append(d.split("don't()")[0])
+
+    # Extract all valid "mul(x,y)" patterns from valid_mul_strings
+    for mvs in valid_mul_strings:
+        valid_muls.extend(re.findall(regex, mvs))
+
+    # Process each valid "mul(x,y)" and calculate the result
+    for vm in valid_muls:
+        numbers = vm[4:-1]  # Remove "mul(" and ")"
+        p1, p2 = map(int, numbers.split(','))  # Split and convert to integers
+        ans += p1 * p2  # Multiply the numbers and add to the total
+
+    print(ans)
 
 
 
