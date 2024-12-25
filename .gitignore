@@ -172,7 +172,7 @@ cython_debug/
 .pypirc
 
 # Ignore all .txt files in any directory starting with 'day'
-aoc*/day*/*.txt
+*/day*/*.txt
 
 # Also ignore .txt files in nested directories under day* folders
 day*/**/*.txt
