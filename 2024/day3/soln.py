@@ -1,16 +1,19 @@
 def part1():
+    with open('./input.txt','r') as f:
+        data = f.read()
+
     import re
+    ans = 0
+    matches = re.findall(r"mul\(\d{1,3},\d{1,3}\)", data)
 
-    pattern = r'mul\([^,]+,[^)]+\)'
+    for match in matches:
+        parts = match[4:-1]
+        p1,p2 = map(int,parts.split(','))
+        ans += p1 * p2
 
-    with open('input.txt','r') as f:
-        text = f.read()
-        matches = re.findall(pattern,text)
+    print(ans)
 
-    result = 0
-        
-    print(matches)
-        
+
 
 def part2():
     raise NotImplementedError()
